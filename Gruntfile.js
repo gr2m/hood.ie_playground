@@ -216,6 +216,14 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
+        },
+
+        // https://github.com/tschaub/grunt-gh-pages
+        'gh-pages': {
+          options: {
+            base: '<%= yeoman.dist %>'
+          },
+          src: ['**']
         }
     });
 
@@ -247,6 +255,12 @@ module.exports = function (grunt) {
         'rev',
         'usemin',
         'clean:server'
+    ]);
+
+    grunt.registerTask('deploy', [
+      'build',
+      'gh-pages',
+      'clean'
     ]);
 
     grunt.registerTask('default', [
