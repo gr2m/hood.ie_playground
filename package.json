@@ -27,5 +27,6 @@
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "repository": "github:gr2m/hood.ie_playground"
 }
